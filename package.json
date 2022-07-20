@@ -1,6 +1,6 @@
 {
   "name": "neutron-core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Lightweight API wrapper for ExpressJS written in TypeScript",
   "exports": {
     ".": "./dist/NeutronCore.class.js",
