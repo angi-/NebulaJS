@@ -1,5 +1,5 @@
 {
-  "name": "nebulajs",
+  "name": "neutron-core",
   "version": "0.0.1",
   "description": "Lightweight API wrapper for ExpressJS written in TypeScript",
   "main": "dist/Nebula.class.js",

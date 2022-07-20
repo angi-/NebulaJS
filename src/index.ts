@@ -1,5 +1,5 @@
-import Nebula from './Nebula.class';
+import NeutronCore from './NeutronCore.class';
 
-const app = new Nebula(4323, { routesPrefix: 'v1' });
+const app = new NeutronCore(4323, { routesPrefix: 'v1' });
 
 app.start();

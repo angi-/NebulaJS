@@ -1,15 +1,15 @@
 import { Express, RequestHandler } from 'express';
 import BaseRouter from './BaseRouter.class';
 import DatabaseDriver from './Database/DatabaseDriver.class';
-export interface NebulaConfig {
+export interface NeutronCoreConfig {
     routesPrefix?: string;
     databaseDriver?: DatabaseDriver;
 }
-export default class Nebula {
+export default class NeutronCore {
     protected app: Express;
     private port;
-    config?: NebulaConfig;
-    constructor(port: number, config?: NebulaConfig);
+    config?: NeutronCoreConfig;
+    constructor(port: number, config?: NeutronCoreConfig);
     use(handler: RequestHandler): void;
     addRouter(router: BaseRouter): void;
     start(): void;
