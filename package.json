@@ -1,9 +1,9 @@
 {
   "name": "neutron-core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Lightweight API wrapper for ExpressJS written in TypeScript",
-  "main": "dist/Nebula.class.js",
-  "types": "dist/Nebula.class.d.ts",
+  "main": "dist/NeutronCore.class.js",
+  "types": "dist/NeutronCore.class.d.ts",
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",
