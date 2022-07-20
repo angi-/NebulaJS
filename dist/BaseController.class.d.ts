@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import ApiResponse from "./ApiResponse";
+import ApiResponse from "./ApiResponse.class";
 export default class BaseController {
     protected apiResponse: ApiResponse;
     constructor();

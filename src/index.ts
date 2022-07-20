@@ -1,5 +1,4 @@
-import NeutronCore from './NeutronCore.class';
-
-const app = new NeutronCore(4323, { routesPrefix: 'v1' });
-
-app.start();
+export { default as NeutronCore } from './NeutronCore.class';
+export { default as BaseRouter } from './BaseRouter.class';
+export { default as BaseController } from './BaseController.class';
+export { default as ApiResponse } from './ApiResponse.class';
