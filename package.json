@@ -2,8 +2,20 @@
   "name": "neutron-core",
   "version": "0.0.3",
   "description": "Lightweight API wrapper for ExpressJS written in TypeScript",
-  "main": "dist/NeutronCore.class.js",
-  "types": "dist/NeutronCore.class.d.ts",
+  "exports": {
+    ".": "./dist/NeutronCore.class.js",
+    "./BaseRouter": "./dist/BaseRouter.class.js",
+    "./BaseController": "./dist/BaseController.class.js",
+    "./ApiResponse": "./dist/ApiResponse.js"
+  },
+  "typesVersions": {
+    "*": {
+      ".": ["./dist/NeutronCore.class.d.ts"],
+      "./BaseRouter": ["./dist/BaseRouter.class.d.ts"],
+      "./BaseController": ["./dist/BaseController.class.d.ts"],
+      "./ApiResponse": ["./dist/ApiResponse.d.ts"]
+    }
+  },
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",
