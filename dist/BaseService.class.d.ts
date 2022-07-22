@@ -1,7 +1,6 @@
 import BaseRouter from "./BaseRouter.class";
-import DatabaseResource from "./Database/DatabaseResource.class";
+import { INeutronCoreContext } from "./NeutronCore.class";
 export default class BaseService extends BaseRouter {
     protected path: string;
-    protected resource: DatabaseResource;
-    constructor(path: string, resource: DatabaseResource);
+    constructor(path: string, context: INeutronCoreContext);
 }

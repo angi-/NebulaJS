@@ -1,10 +1,13 @@
 import express, { Router } from 'express'
+import { INeutronCoreContext } from './NeutronCore.class';
 
 export default class BaseRouter {
     protected router: Router;
+    protected context: INeutronCoreContext;
 
-    constructor() {
+    constructor(context: INeutronCoreContext) {
         this.router = express.Router();
+        this.context = context;
     }
 
     addMiddleware(middleware: any) {

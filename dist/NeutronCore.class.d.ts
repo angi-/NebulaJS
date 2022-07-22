@@ -1,16 +1,26 @@
 import { Express, RequestHandler } from 'express';
 import BaseRouter from './BaseRouter.class';
-import DatabaseDriver from './Database/DatabaseDriver.class';
-export interface NeutronCoreConfig {
+import IDatabaseDriver from './Database/DatabaseDriver.interface';
+import ILogger from './Logger/Logger.interface';
+export interface INeutronCoreConfig {
     routesPrefix?: string;
-    databaseDriver?: DatabaseDriver;
+    corsOrigin?: string;
+    corsSuccessStatus?: number;
+    databaseDriver?: IDatabaseDriver;
+    loggerDriver?: ILogger;
+}
+export interface INeutronCoreContext {
+    database?: IDatabaseDriver | null;
+    logger: ILogger;
 }
 export default class NeutronCore {
     protected app: Express;
     private port;
-    config?: NeutronCoreConfig;
-    constructor(port: number, config?: NeutronCoreConfig);
+    private config?;
+    private context;
+    constructor(port: number, config?: INeutronCoreConfig);
     use(handler: RequestHandler): void;
     addRouter(router: BaseRouter): void;
+    getContext(): INeutronCoreContext;
     start(): void;
 }
