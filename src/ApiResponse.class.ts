@@ -44,10 +44,8 @@ export default class ApiResponse {
         });
     }
 
-    serverError(res: Response, exception?: any) {
-        this.context.logger.error(exception);
-
-        let message = exception?.message;
+    serverError(res: Response, message: any) {
+        this.context.logger.error(message);
 
         if (process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'production') {
             message = 'A problem was detected while processing the request, please try again later';
