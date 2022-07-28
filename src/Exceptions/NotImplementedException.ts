@@ -1,8 +1,8 @@
 import BaseException from "./BaseException";
 
 export default class NotImplementedException extends BaseException {
-    constructor(message?: string) {
+    constructor(message: string) {
         super(message);
-        this.setName('NotImplementedException');
+        this.name = 'NotImplementedException';
     }
 }

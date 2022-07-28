@@ -55,4 +55,16 @@ export default class ApiResponse {
             message: message
         });
     }
+
+    byException(res: Response, exception: Error) {
+        if (exception.name === 'NotFoundException') {
+            return this.notFound(res, exception.message);
+        }
+
+        if (exception.name === 'AlreadyExistsException') {
+            return this.conflict(res, exception.message);
+        }
+
+        this.serverError(res, exception.message);
+    }
 }

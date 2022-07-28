@@ -1,13 +1,10 @@
-export default class BaseException {
-    public message?: string;
+export default class BaseException extends Error {
+    public message: string;
     public name: string;
 
-    constructor(message?: string) {
+    constructor(message: string) {
+        super();
+        this.name = 'BaseException';
         this.message = message;
-        this.name = 'Exception';
-    }
-
-    setName(name: string) {
-        this.name = name;
     }
 }
