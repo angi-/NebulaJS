@@ -9,5 +9,5 @@ export default class ApiResponse {
     conflict(res: Response, output?: any): void;
     notFound(res: Response, output?: any): void;
     validationError(res: Response, output: any): void;
-    serverError(res: Response, exception?: any): void;
+    serverError(res: Response, message: any): void;
 }

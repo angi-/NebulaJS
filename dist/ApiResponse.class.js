@@ -34,9 +34,8 @@ class ApiResponse {
             message: output
         });
     }
-    serverError(res, exception) {
-        this.context.logger.error(exception);
-        let message = exception === null || exception === void 0 ? void 0 : exception.message;
+    serverError(res, message) {
+        this.context.logger.error(message);
         if (process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'production') {
             message = 'A problem was detected while processing the request, please try again later';
         }
