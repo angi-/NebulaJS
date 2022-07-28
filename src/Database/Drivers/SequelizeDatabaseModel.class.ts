@@ -7,6 +7,10 @@ export default class SequelizeDatabaseResource implements IDatabaseResource {
         this.model = model;
     }
 
+    getRawModel() {
+        return this.model;
+    }
+
     async findOne(params?: any): Promise<any> {
         return await this.model.findOne(params);
     }
