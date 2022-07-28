@@ -7,7 +7,7 @@ const BaseException_1 = __importDefault(require("./BaseException"));
 class NotImplementedException extends BaseException_1.default {
     constructor(message) {
         super(message);
-        this.setName('NotImplementedException');
+        this.name = 'NotImplementedException';
     }
 }
 exports.default = NotImplementedException;

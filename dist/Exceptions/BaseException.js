@@ -1,12 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class BaseException {
+class BaseException extends Error {
     constructor(message) {
+        super();
+        this.name = 'BaseException';
         this.message = message;
-        this.name = 'Exception';
-    }
-    setName(name) {
-        this.name = name;
     }
 }
 exports.default = BaseException;

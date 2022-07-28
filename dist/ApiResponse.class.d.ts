@@ -10,4 +10,5 @@ export default class ApiResponse {
     notFound(res: Response, output?: any): void;
     validationError(res: Response, output: any): void;
     serverError(res: Response, message: any): void;
+    byException(res: Response, exception: Error): void;
 }

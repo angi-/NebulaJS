@@ -1,6 +1,5 @@
-export default class BaseException {
-    message?: string;
+export default class BaseException extends Error {
+    message: string;
     name: string;
-    constructor(message?: string);
-    setName(name: string): void;
+    constructor(message: string);
 }
