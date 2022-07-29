@@ -14,6 +14,7 @@ export default class DefaultLogger implements ILogger {
     }
 
     error(...message: any) {
+        console.trace(message);
         console.log(`${this.prefix}${this.separator}${chalk.red(message)}`);
     }
 }
